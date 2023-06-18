@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    margin: 0px;
+}
+
+.tablas{   
+    margin-top: -582px;    
+    width: 2000px;
+    height: 1414;
+}
+.estudiante{            
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;       
+}
+
+.texto-alumno{            
+    width: 100%;
+    height: 110px;
+}
+
+.curso{            
+    text-align: center;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;   
+    font-weight: bolder;         
+}
+
+.texto-curso{
+    padding-top: 62px;
+}
+
+.firmas{
+    padding-top: 170px;    
+    padding-left: 380px;
+}
+
+.responsable{            
+    padding-left: 200px;
+    width: 300px;
+    text-align: center;    
+}
+
+.profesor{    
+    padding-left: 130px;  
+    width: 500px;
+    text-align: center;
+}
+
+.texto-firma{          
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
