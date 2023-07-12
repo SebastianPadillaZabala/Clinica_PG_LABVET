@@ -1,4 +1,5 @@
 <div>
+
     <body class="antialiased font-sans bg-gray-200">
         <div class="container p-3 mx-auto px-4 sm:px-8">
             <div class="py-6">
@@ -119,12 +120,14 @@
                                                 <span class="relative">Ver</span>
                                             </span>
                                         </a>
-                                        <a href="">
-                                            <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                                                <span aria-hidden class="absolute inset-0 bg-red-600 opacity-50 rounded-full"></span>
-                                                <span class="relative">Eliminar</span>
-                                            </span>
-                                        </a>
+                                        <div class="relative inline-block font-semibold text-whie leading-tight">
+                                        <form aria-hidden action="{{route( 'destroyAnalisis', [$a->id_amascota] )}}" method="POST" onsubmit="return confirm('Are you sure to delete?')">
+                                            @csrf
+                                            <button type="submit" class="px-3 py-1 inset-0 bg-red-500 rounded-full block appearance-none w-full
+                                                  text-white focus:outline-none hover:bg-red-600 hover:shadow-none focus:border-l focus:border-r focus:bg-red-600
+                                                 hover:text-black focus:border-gray-500">Eliminar</button>
+                                        </form>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

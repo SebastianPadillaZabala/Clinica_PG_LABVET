@@ -25,122 +25,135 @@ class MascotasController extends Controller
         return view('layouts.historialMascota', ['id_masc' => $id]);
     }
 
-    public function hematicaGet($id){
+    public function hematicaGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.biometria_hematica',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.biometria_hematica', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function mocoCoproGet($id){
+    public function mocoCoproGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.moco_copro',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.moco_copro', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function hormonasGet($id){
+    public function hormonasGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.hormonas',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.hormonas', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function citologia_celularGet($id){
+    public function citologia_celularGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.citologia_celular',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.citologia_celular', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function microbiologiaGet($id){
+    public function microbiologiaGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.microbiologia',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.microbiologia', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function inmunologiaGet($id){
+    public function inmunologiaGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.inmunologia',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.inmunologia', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    
-    public function frotis_sanguineoGet($id){
+
+    public function frotis_sanguineoGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.frotis_sanguineo',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.frotis_sanguineo', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function sereadoGet($id){
+    public function sereadoGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.coproparasitologico_sereado',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.coproparasitologico_sereado', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function qmcCanGet($id){
+    public function qmcCanGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.quimica_sanguinea_can',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.quimica_sanguinea_can', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function qmcFelGet($id){
+    public function qmcFelGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.quimica_sanguinea_fel',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.quimica_sanguinea_fel', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function raspado_cutaneoGet($id){
+    public function raspado_cutaneoGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.raspado_cutaneo',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.raspado_cutaneo', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function microbiologiaCoproGet($id){
+    public function microbiologiaCoproGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.microbiologia_copro',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.microbiologia_copro', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function orinaGet($id){
+    public function orinaGet($id)
+    {
         $mascota = Mascota::find($id);
         $propietario = DB::table('pacientes')
-        ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-        ->select('pacientes.namePac')
-        ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.examen_orina',['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
+            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
+            ->select('pacientes.namePac')
+            ->where('mascotas.id_masc', '=', $id)->get();
+        return view('analisis.examen_orina', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
     public function saveAnalisisPost(Request $request, $id)
@@ -150,11 +163,11 @@ class MascotasController extends Controller
         $analisis->fecha = $request->input('fecha');
         $analisis->id_mascota = $id;
         $file = $request->file('file');
-        if (Storage::putFileAs('/public/'.'mascostas/' . $id . '/', $file, time() . '_' . $file->getClientOriginalName())) {
-            $analisis->url = time() . '_' . $file->getClientOriginalName();
-            $analisis->save();
-            return redirect()->route('mascotasAnalisis', ['id' => $id]);
-        }
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        Storage::putFileAs('/public/' . 'mascostas/' . $id . '/', $file, $fileName);
+        $analisis->url = $fileName;
+        $analisis->save();
+        return redirect()->route('mascotasAnalisis', ['id' => $id]);
     }
 
     /**
@@ -220,6 +233,11 @@ class MascotasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $analisis = HistorialM::find($id);
+        $url = '/storage/mascotas/' . $analisis->id_mascota . '/' . $analisis->url;
+        Storage::delete($url);
+        $analisis->delete();
+
+        return redirect()->back()->with('success', 'Analisis deleted successfully.');
     }
 }

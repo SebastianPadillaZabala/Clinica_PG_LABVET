@@ -101,6 +101,9 @@ Route::get('/examen_orina/{id}',[MascotasController::class, 'orinaGet'])
 Route::post('/AnalisisMascotas/{id_masc}',[MascotasController::class, 'saveAnalisisPost'])
 ->name('saveAnalisisM');
 
+Route::post('/destroyM/{id}',[MascotasController::class, 'destroy'])
+->name('destroyAnalisis');
+
 //PERSONAS PACIENTES
 Route::get('/pacientes/{id}',[PacientesController::class, 'index'])
 ->name('pacientesH');
