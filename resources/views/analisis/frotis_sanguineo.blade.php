@@ -5,10 +5,10 @@
     <div class="w-full bg-white lg:w-full xl:w-2/3 lg:mt-5 lg:mb-20 lg:shadow-xl xl:mt-2 xl:mb-20 xl:shadow-xl print:transform print:scale-90 print:mt-0">
         <header class="flex flex-col items-center rounded-md px-8 pt-5 text-lg text-center bg-white border-t-8 border-blue-800 md:block lg:block xl:block print:block md:items-start lg:items-start xl:items-start print:items-start md:text-left lg:text-left xl:text-left print:text-left print:pt-3 print:px-1 md:relative lg:relative xl:relative print:relative">
             <img class="w-3/6 h-auto md:w-1/4 lg:ml-12 xl:ml-12 print:w-3/6 print:py-0" src="/storage/img/logo.jpeg" />
-            <div class="flex flex-row mt-5 mb-2 ml-0 text-2xl text-center font-bold md:text-3xl lg:text-4xl xl:text-4xl print:text-2xl lg:ml-12 xl:ml-12 justify-center">
-               FROTIS SANGUINEO
+            <div class="flex flex-row mt-5 mb-2 ml-0 text-xl text-center font-bold md:text-xl lg:text-xl xl:text-xl print:text-xl lg:ml-12 xl:ml-12 justify-center">
+                FROTIS SANGUINEO
             </div>
-            <div class="flex flex-col lg:ml-12 xl:ml-12 print:text-sm">
+            <div class="flex flex-col text-sm lg:ml-5 xl:ml-5 print:text-sm">
                 <span class="font-bold pr-3">PROPIETARIO:
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
@@ -16,10 +16,10 @@
                     <input class="font-normal uppercase" type="text">
                 </span>
                 <span class="font-bold pr-3">FECHA:
-                    <input class="font-normal" type="date">
+                    <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
                 </span>
             </div>
-            <contract class="flex flex-col m-12 text-start lg:m-12 md:flex-none md:text-left md:relative md:m-0 md:mt-16 lg:flex-none lg:text-left lg:relative xl:flex-none xl:text-left xl:relative print:flex-none print:text-left print:relative print:m-0 print:mt-3 print:text-sm">
+            <contract class="flex flex-col text-sm text-start lg:m-5 md:flex-none md:text-left md:relative md:m-0 md:mt-5 lg:flex-none lg:text-left lg:relative xl:flex-none print:text-left print:m-0 print:mt-0 print:text-sm">
                 <from class="flex flex-row">
                     <span class="font-bold pr-3">PACIENTE:
                         <span class="font-normal"> {{$mascota->name}}</span>
@@ -44,15 +44,15 @@
         </header>
         <content>
             <div id="content" class="flex flex-col justify-center md:p-8 lg:p-2 xl:p-2 print:mt-5 print:justify-center print:p-1">
-                <div class="flex flex-col items-start gap-1 mb-5 m-8 leading-relaxed print:mt-1 print:mb-20">
-                    <h1 class="text-l font-bold">Serie blanca</h1>
-                    <textarea rows="1" cols="95"></textarea>
-                    <h1 class="text-l font-bold">Serie roja</h1>
-                    <textarea rows="1" cols="95"></textarea>
-                    <h1 class="text-l font-bold">Plaquetas</h1>
-                    <textarea rows="1" cols="95"></textarea>
-                    <h1 class="text-l font-bold">Evaluaci&oacute;n citol&oacute;gica</h1>
-                    <textarea rows="2" cols="95"></textarea>
+                <div class="flex flex-col items-start gap-1 mb-5 m-8 leading-relaxed print:mt-1 print:mb-20 print:text-sm print:m-0">
+                    <h1 class="text-sm font-bold">Serie blanca</h1>
+                    <textarea rows="1" cols="110"></textarea>
+                    <h1 class="text-sm font-bold">Serie roja</h1>
+                    <textarea rows="1" cols="110"></textarea>
+                    <h1 class="text-sm font-bold">Plaquetas</h1>
+                    <textarea rows="1" cols="110"></textarea>
+                    <h1 class="text-sm font-bold">Evaluaci&oacute;n citol&oacute;gica</h1>
+                    <textarea rows="2" cols="110"></textarea>
                 </div>
                 <div class="flex flex-row justify-center items-center m-5 mb-10 leading-relaxed print:mt-1 print:mb-2">
                     <form method="POST" action="/upload" enctype="multipart/form-data">
@@ -71,7 +71,7 @@
         <br>
         <div class="flex flex-col items-center mb-24 leading-relaxed print:mt-0 print:mb-5">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" onclick="window.print()">Imprimir</button>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" onclick="mostrarModalImportar()">Guardar</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" onclick="mostrarModalGuardar()">Guardar</button>
             <img src="/storage/img/firma2.jpeg" class="w-64 text-4xl text-center print:text-lg" />
         </div>
         <br>
@@ -123,39 +123,39 @@
     <img src="/storage/img/fondo.png" class="hidden print:block opacity-20 absolute top-0 right-0" alt="">
 </body>
 <!-- modal Importar -->
-<div class="modalImportar h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-orange bg-opacity-50 hidden">
-  <!-- modal -->
-  <div class="bg-teal-600 rounded shadow-lg w-10/12 md:w-1/3">
-    <!-- modal header -->
-    <div class="border-b px-4 py-2 flex justify-between items-center">
-      <h3 class="font-semibold text-white text-lg">Guardar documento en el sistema</h3>
-      <button onclick="ocultarModalImportar()" class="text-white close-modal">X</button>
+<div class="modalGuardar h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-orange bg-opacity-50 hidden">
+    <!-- modal -->
+    <div class="bg-teal-600 rounded shadow-lg w-10/12 md:w-1/3">
+        <!-- modal header -->
+        <div class="border-b px-4 py-2 flex justify-between items-center">
+            <h3 class="font-semibold text-white text-lg">Guardar documento en el sistema</h3>
+            <button onclick="ocultarModalGuardar()" class="text-white close-modal">X</button>
+        </div>
+        <!-- modal body -->
+        <div class="p-3 text-white">
+            <form action="{{route('saveAnalisisM', [$id])}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <label for="name" class="text-white text-sm font-bold leading-tight tracking-normal">Nombre</label>
+                <input id="name" name="name" value="Frotis Sanguineo" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" />
+                <label for="fecha" class="text-white text-sm font-bold leading-tight tracking-normal">Fecha</label>
+                <input id="fecha" name="fecha" type="date" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Fecha" />
+                <input name="file" type="file" id="file">
+        </div>
+        <div class="flex justify-end items-center w-100 border-t p-3">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white">Guardar</button>
+        </div>
+        </form>
     </div>
-    <!-- modal body -->
-    <div class="p-3 text-white">
-      <form action="{{route('saveAnalisisM', [$id])}}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <label for="name" class="text-white text-sm font-bold leading-tight tracking-normal">Nombre</label>
-        <input id="name" name="name" value="Frotis Sanguineo" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"/>
-        <label for="fecha" class="text-white text-sm font-bold leading-tight tracking-normal">Fecha</label>
-        <input id="fecha" name="fecha" type="date" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Fecha" />
-        <input name="file" type="file" id="file">
-    </div>
-    <div class="flex justify-end items-center w-100 border-t p-3">
-      <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white">Save</button>
-    </div>
-    </form>
-  </div>
 </div>
 <script>
-    const modalImportar = document.querySelector('.modalImportar')
+    const modalGuardar = document.querySelector('.modalGuardar')
 
-    function mostrarModalImportar() {
-        modalImportar.classList.remove('hidden')
+    function mostrarModalGuardar() {
+        modalGuardar.classList.remove('hidden')
     }
 
-    function ocultarModalImportar() {
-        modalImportar.classList.add('hidden')
+    function ocultarModalGuardar() {
+        modalGuardar.classList.add('hidden')
     }
 
     function previewImage(event) {

@@ -49,7 +49,7 @@ Route::post('/register',[LoginController::class, 'create'])
 Route::delete('/userDestroy/{id}', [LoginController::class, 'destroy'])
 ->name('user.destroy');
 
-//MASCOTAS
+//MASCOTAS AND ANALISIS
 Route::get('/mascotas/{id}',[MascotasController::class, 'index'])
 ->name('mascotas');
 

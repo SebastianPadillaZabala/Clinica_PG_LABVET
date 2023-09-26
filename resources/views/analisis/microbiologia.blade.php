@@ -16,7 +16,7 @@
           <input class="font-normal uppercase" type="text">
         </span>
         <span class="font-bold pr-3">FECHA:
-          <input class="font-normal" type="date">
+          <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
         </span>
       </div>
       <contract class="flex flex-col m-12 text-start lg:m-12 md:flex-none md:text-left md:relative md:m-0 md:mt-16 lg:flex-none lg:text-left lg:relative xl:flex-none xl:text-left xl:relative print:flex-none print:text-left print:relative print:m-0 print:mt-3 print:text-sm">
@@ -241,7 +241,7 @@
       <form action="{{route('saveAnalisisM', [$id])}}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="name" class="text-white text-sm font-bold leading-tight tracking-normal">Nombre</label>
-        <input id="name" name="name" value="Microbiologia" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"/>
+        <input id="name" name="name" value="Microbiologia" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" />
         <label for="fecha" class="text-white text-sm font-bold leading-tight tracking-normal">Fecha</label>
         <input id="fecha" name="fecha" type="date" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Fecha" />
         <input name="file" type="file" id="file">

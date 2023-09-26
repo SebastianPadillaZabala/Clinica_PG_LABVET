@@ -5,20 +5,20 @@
     <div class="w-full bg-transparent lg:w-full xl:w-2/3 lg:mt-5 lg:mb-20 lg:shadow-xl xl:mt-2 xl:mb-20 xl:shadow-xl print:transform print:scale-90">
         <header class="flex flex-col items-center rounded-md px-8 pt-1 text-lg text-center bg-white border-t-8 border-blue-800 md:block lg:block xl:block print:block md:items-start lg:items-start xl:items-start print:items-start md:text-left lg:text-left xl:text-left print:text-left print:pt-0 print:pb-0 print:px-2 md:relative lg:relative xl:relative print:relative">
             <img class="w-3/6 h-auto md:w-1/4 lg:ml-12 xl:ml-12 print:w-3/6 print:py-0 print:mt-1 print:mb-1" src="/storage/img/logo2.jpeg" />
-            <div class="flex flex-row mt-2 mb-2 ml-0 text-2xl text-center font-bold md:text-3xl lg:text-4xl xl:text-4xl print:text-2xl lg:ml-12 xl:ml-12 justify-center print:mt-0">COPROPARASITOLOGICO
+            <div class="flex flex-row mt-2 mb-2 ml-0 text-xl text-center font-bold md:text-xl lg:text-xl xl:text-xl print:text-xl lg:ml-12 xl:ml-12 justify-center">COPROPARASITOLOGICO
             </div>
-            <div class="flex flex-col lg:ml-12 xl:ml-12 print:text-sm">
+            <div class="flex flex-col text-sm lg:ml-5 xl:ml-5 print:text-sm">
                 <span class="font-bold pr-3">PROPIETARIO:
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
                 <span class="font-bold pr-3">SOLICITADO POR:
                     <input class="font-normal uppercase" type="text">
-                    <span class="font-bold pr-3">FECHA:
-                        <input class="font-normal" type="date">
-                    </span>
+                </span>
+                <span class="font-bold pr-3">FECHA:
+                    <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
                 </span>
             </div>
-            <contract class="flex flex-col m-8 text-start lg:m-12 md:flex-none md:text-left md:relative md:m-0 md:mt-14 lg:flex-none lg:text-left lg:relative xl:flex-none xl:text-left xl:relative print:flex-none print:text-left print:relative print:m-0 print:mt-1 print:text-sm">
+            <contract class="flex flex-col text-sm text-start lg:m-5 md:flex-none md:text-left md:relative md:m-0 md:mt-5 lg:flex-none lg:text-left lg:relative xl:flex-none print:text-left print:m-0 print:mt-0 print:text-sm">
                 <from class="flex flex-row">
                     <span class="font-bold pr-3">PACIENTE:
                         <span class="font-normal"> {{$mascota->name}}</span>
@@ -42,122 +42,172 @@
             </contract>
         </header>
         <content>
-            <div id="content" class="flex justify-center md:p-8 lg:p-2 xl:p-2 print:mt-3 print:p-1">
-                <table class="w-1/4 text-left border-t border-b border-l border-r table-auto print:text-sm" id="table-items">
+            <div id="content" class="flex justify-center text-sm print:mt-5">
+                <table class="w-full text-left border-t text-sm border-b border-l border-r table-auto print:text-sm" id="table-items">
                     <thead>
                         <tr class="text-white bg-gray-700 print:bg-gray-300 print:text-black">
-                            <th class="px-4 py-2">EXAMEN MACROSCOPICO</th>
-                            <th class="px-4 py-2 text-center"></th>
+                            <th class="px-2 py-1">EXAMEN MACROSCÓPICO</th>
+                            <th class="px-2 py-1 text-center"></th>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="px-4 py-2 border font-bold">COLOR</td>
-                            <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                            <td class="px-2 py-1 border font-bold">COLOR</td>
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
+                            </td>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="bg-gray-100 print:bg-white">
-                            <td class="px-4 py-2 border font-bold">CONSISTENCIA</td>
-                            <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                            <td class="px-2 py-1 border font-bold">CONSISTENCIA</td>
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
+                            </td>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
-                            <td class="px-4 py-2 border font-bold">
+                            <td class="px-2 py-1 border font-bold">
                                 RESTOS ALIMENTICIOS
                             </td>
-                            <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <textarea name="" id="" cols="80" rows="2"></textarea>
+                            </td>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="text-white bg-gray-700 font-bold print:bg-gray-300 print:text-black">
-                            <td class="px-4 py-2 text-left">EXAMEN MICROSCOPICO</td>
-                            <th class="px-4 py-2 text-center"></th>
+                            <td class="px-2 py-1 text-left">EXAMEN MICROSCÓPICO</td>
+                            <th class="px-2 py-1 text-center"></th>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+                            </td>
                         </tr>
                         <tr class="bg-gray-100 print:bg-white">
-                            <td class="px-4 py-2 border font-bold">LEVADURAS</td>
-                            <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                            <td class="px-2 py-1 border font-bold">LEVADURAS</td>
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
+                            </td>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="bg-white print:bg-white">
-                            <td class="px-4 py-2 border font-bold">PARASITOS</td>
-                            <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                            <td class="px-2 py-1 border font-bold">PARASITOS</td>
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <textarea name="" id="" cols="80" rows="2"></textarea>
+                            </td>
+                            <td class="px-2 py-1 text-center print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </content>
-        <div class="flex flex-col items-center mb-10 leading-relaxed print:mt-1 print:mb-2">
-            <h1 class="text-xl font-bold">MOCO FECAL</h1>
-            <table class="w-2/3 text-left border-t border-b border-l border-r table-auto print:text-sm" id="table-items">
+        <div class="flex flex-col items-center text-sm mb-5 leading-relaxed print:mt-1 print:mb-2">
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 mb-2 print:hidden" id="agregarFila">Agregar Fila</button>
+            <h1 class="text-l font-bold">MOCO FECAL</h1>
+            <table class="w-full text-left text-sm border-t border-b border-l border-r table-auto print:text-sm" id="table-items2">
                 <tbody>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">CONSISTENCIA</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">CONSISTENCIA</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">MOCO</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">MOCO</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">
+                        <td class="px-2 py-1 border font-bold">
                             LEUCOCITOS
                         </td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">POLIMORFONUCLEARES</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">POLIMORFONUCLEARES</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">MONONUCLEARES</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">MONONUCLEARES</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">HEMATIES</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">HEMATIES</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">AMEBAS EN FRESCO</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">AMEBAS EN FRESCO</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">FLORA BACTERIANA</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">FLORA BACTERIANA</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-4 py-2 border font-bold">OTROS</td>
-                        <td class="px-4 py-2 text-start border tabular-nums slashed-zero">
+                        <td class="px-2 py-1 border font-bold">OTROS</td>
+                        <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-start w-full">
+                        </td>
+                        <td class="px-2 py-1 text-center print:hidden">
+                            <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" id="agregarFilaMocoFecal">Agregar Fila</button>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" onclick="window.print()">Imprimir</button>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" onclick="mostrarModalImportar()">Guardar</button>
-            <img src="/storage/img/firma2.jpeg" class="print:m-2.5 w-64 text-center" />
+            <img src="/storage/img/firma2.jpeg" class="print:m-20 w-64 text-center" />
         </div>
-        <footer class="flex items-center rounded-md justify-center pb-10 text-white bg-blue-800 print:text-white print:mt-0 print:pb-0">
+        <footer class="flex items-center rounded-md justify-center pb-10 text-white bg-blue-800 print:text-white print:mt-5 print:pb-0">
             <div class="grid grid-cols-3 gap-8 sm:gap-20 sm:grid-cols-3 md:flex md:justify-between print:gap-20 print:flex print:justify-between">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mt-2">
@@ -217,7 +267,7 @@
             <form action="{{route('saveAnalisisM', [$id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label for="name" class="text-white text-sm font-bold leading-tight tracking-normal">Nombre</label>
-                <input id="name" name="name" value="Moco Y Copro" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"/>
+                <input id="name" name="name" value="Moco Y Copro" class="mb-5 mt-2 text-black focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" />
                 <label for="fecha" class="text-white text-sm font-bold leading-tight tracking-normal">Fecha</label>
                 <input id="fecha" name="fecha" type="date" class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Fecha" />
                 <input name="file" type="file" id="file">
@@ -237,6 +287,54 @@
 
     function ocultarModalImportar() {
         modalImportar.classList.add('hidden')
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const agregarFilaBtn = document.getElementById("agregarFila");
+        const table = document.getElementById("table-items").getElementsByTagName("tbody")[0];
+
+        agregarFilaBtn.addEventListener("click", function() {
+            const newRow = table.insertRow(-1);
+
+            // Agregar celdas a la nueva fila
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = '<input type="text" class="px-2 py-1 w-full border font-bold">';
+            cell2.innerHTML = '<input type="text" class="px-2 py-1 border text-start w-full tabular-nums slashed-zero">';
+            cell3.innerHTML = '<button class="px-2 py-1 bg-red-500 border text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
+        });
+    });
+
+    function eliminarFila(button) {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const agregarFilaBtn = document.getElementById("agregarFilaMocoFecal");
+        const table = document.getElementById("table-items2").getElementsByTagName("tbody")[0];
+
+        agregarFilaBtn.addEventListener("click", function() {
+            const newRow = table.insertRow(-1);
+
+            // Agregar celdas a la nueva fila
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = '<input type="text" class="px-2 py-1 w-full border font-bold">';
+            cell2.innerHTML = '<input type="text" class="px-2 py-1 border text-start w-full tabular-nums slashed-zero">';
+            cell3.innerHTML = '<button class="px-2 py-1 bg-red-500 border text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
+        });
+    });
+
+    function eliminarFila(button) {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
     }
 </script>
 @endsection

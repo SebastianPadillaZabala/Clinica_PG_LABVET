@@ -164,7 +164,7 @@ class MascotasController extends Controller
         $analisis->id_mascota = $id;
         $file = $request->file('file');
         $fileName = time() . '_' . $file->getClientOriginalName();
-        Storage::putFileAs('/public/' . 'mascostas/' . $id . '/', $file, $fileName);
+        Storage::putFileAs('/public/' . 'mascotas/' . $id . '/', $file, $fileName);
         $analisis->url = $fileName;
         $analisis->save();
         return redirect()->route('mascotasAnalisis', ['id' => $id]);
@@ -234,7 +234,7 @@ class MascotasController extends Controller
     public function destroy($id)
     {
         $analisis = HistorialM::find($id);
-        $url = '/storage/mascotas/' . $analisis->id_mascota . '/' . $analisis->url;
+        $url = '/public/mascotas/' . $analisis->id_mascota . '/' . $analisis->url;
         Storage::delete($url);
         $analisis->delete();
 

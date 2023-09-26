@@ -114,14 +114,14 @@
                                         </p>
                                     </td>
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <a href="/storage/mascostas/{{$a->id_mascota}}/{{$a->url}}" target="_blank">
+                                        <a href="/storage/mascotas/{{$a->id_mascota}}/{{$a->url}}" target="_blank">
                                             <span class="relative inline-block px-3 py-1 font-semibold text-gray-900 leading-tight">
                                                 <span aria-hidden class="absolute inset-0 bg-indigo-700 opacity-50 rounded-full"></span>
                                                 <span class="relative">Ver</span>
                                             </span>
                                         </a>
                                         <div class="relative inline-block font-semibold text-whie leading-tight">
-                                        <form aria-hidden action="{{route( 'destroyAnalisis', [$a->id_amascota] )}}" method="POST" onsubmit="return confirm('Are you sure to delete?')">
+                                        <form aria-hidden action="{{route( 'destroyAnalisis', [$a->id_amascota] )}}" method="POST">
                                             @csrf
                                             <button type="submit" class="px-3 py-1 inset-0 bg-red-500 rounded-full block appearance-none w-full
                                                   text-white focus:outline-none hover:bg-red-600 hover:shadow-none focus:border-l focus:border-r focus:bg-red-600
