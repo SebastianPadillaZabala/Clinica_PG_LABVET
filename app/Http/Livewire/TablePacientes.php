@@ -12,7 +12,7 @@ class TablePacientes extends Component
     public function render()
     {
         $pacientes = new Paciente();
-        $pacientes = Paciente::where('ci', 'like', '%' . $this->search .'%')->get();
+        $pacientes = Paciente::where('namePac', 'like', '%' . $this->search .'%')->get();
         return view('livewire.table-pacientes', ['pacientes' => $pacientes]);
     }
 }

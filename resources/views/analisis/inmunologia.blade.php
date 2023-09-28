@@ -4,7 +4,7 @@
 <body class="bg-gray-200 print:bg-white pt-5 md:flex lg:flex xl:flex print: md:justify-center lg:justify-center xl:justify-center print:justify-center sf">
   <div class="w-full bg-white lg:w-full xl:w-2/3 lg:mt-5 lg:mb-20 lg:shadow-xl xl:mt-2 xl:mb-20 xl:shadow-xl print:transform print:scale-90">
     <header class="flex flex-col items-center rounded-md px-8 pt-5 text-lg text-center bg-white border-t-8 border-blue-800 md:block lg:block xl:block print:block md:items-start lg:items-start xl:items-start print:items-start md:text-left lg:text-left xl:text-left print:text-left print:pt-3 print:px-1 md:relative lg:relative xl:relative print:relative">
-      <img class="w-3/6 h-auto md:w-1/4 lg:ml-12 xl:ml-12 print:w-3/6 print:py-0" src="/storage/img/logo.jpeg" />
+      <img class="w-3/6 h-auto md:w-1/4 lg:ml-12 xl:ml-12 print:w-3/6 print:py-0" src="/storage/img/logo3.jpeg" />
       <div class="flex flex-row mt-5 mb-2 ml-0 text-xl text-center font-bold md:text-xl lg:text-xl xl:text-xl print:text-xl lg:ml-12 xl:ml-12 justify-center">
         INMUNOLOGIA
       </div>
@@ -59,7 +59,7 @@
       </table>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded print:hidden mt-3" onclick="window.print()">Imprimir</button>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded print:hidden mt-3" onclick="mostrarModalImportar()">Guardar</button>
-      <img src="/storage/img/firma2.jpeg" class="w-64 print:mt-72 text-center print:text-lg" />
+      <img src="/storage/img/firma3.jpeg" class="w-64 print:mt-72 text-center print:text-lg" />
     </div>
     <br>
     <footer class="flex items-center rounded-md justify-center pb-10 text-white bg-blue-800 print:text-white print:mt-14 print:pb-0">

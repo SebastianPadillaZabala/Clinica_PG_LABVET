@@ -95,7 +95,7 @@
                                                 <span class="relative">Historial</span>
                                             </span>
                                         </a>
-                                        <a href="">
+                                        <a href="#">
                                             <span class="relative inline-block px-3 py-1 font-semibold text-gray-900 leading-tight">
                                                 <span aria-hidden class="absolute inset-0 bg-indigo-700 opacity-50 rounded-full"></span>
                                                 <span class="relative">Editar</span>
