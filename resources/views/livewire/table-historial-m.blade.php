@@ -32,7 +32,6 @@
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('moco_copro',[$id])}}">Moco y Copro</a></li>
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('hormonas',[$id])}}">Hormonas</a></li>
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('citologia_celular',[$id])}}">Citologia Celular</a></li>
-                                <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('microbiologia',[$id])}}">Microbiologia</a></li>
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('inmunologia',[$id])}}">Inmunologia</a></li>
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('frotis_sanguineo',[$id])}}">Frotis Sanguineo</a></li>
                                 <li class="rounded-sm px-3 py-1 font-semibold border-b-2 hover:bg-gray-300"><a href="{{route('coproparasitologico_sereado',[$id])}}">Copro Sereado</a></li>

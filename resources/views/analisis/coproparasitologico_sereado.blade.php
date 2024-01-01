@@ -13,7 +13,7 @@
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
                 <span class="font-bold pr-3">SOLICITADO POR:
-                    <input class="font-normal uppercase" type="text">
+                    <input class="w-64 font-normal uppercase" type="text">
                 </span>
                 <span class="font-bold pr-3">FECHA:
                     <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -49,7 +49,7 @@
                         <tr class="text-white bg-gray-700 print:bg-gray-300 print:text-black">
                             <th class="px-2 py-1">EXAMEN MACROSCOPICO</th>
                             <th class="px-2 py-1 text-center"></th>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -62,7 +62,7 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -73,7 +73,7 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -84,14 +84,14 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <textarea name="" id="" cols="80" rows="1"></textarea>
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
                         <tr class="text-white bg-gray-700 font-bold print:bg-gray-300 print:text-black">
                             <td class="px-2 py-1 text-left">EXAMEN MICROSCOPICO</td>
                             <th class="px-2 py-1 text-center"></th>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -102,7 +102,7 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <input type="text" class="text-start w-full">
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -113,7 +113,7 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <textarea name="" id="" cols="80" rows="2"></textarea>
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>
@@ -124,7 +124,18 @@
                             <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                                 <textarea name="" id="" cols="80" rows="2"></textarea>
                             </td>
-                            <td class="px-2 py-1 text-center print:hidden">
+                            <td class="px-2 py-1 text-center border print:hidden">
+                                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white print:bg-white">
+                            <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
+                                <input type="text" class="w-full" value="PARASITOS 3ra MUESTRA">
+                            </td>
+                            <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
+                                <textarea name="" id="" cols="80" rows="2"></textarea>
+                            </td>
+                            <td class="px-2 py-1 text-center border print:hidden">
                                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
                             </td>
                         </tr>

@@ -13,7 +13,7 @@
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
                 <span class="font-bold pr-3">SOLICITADO POR:
-                    <input class="font-normal uppercase" type="text">
+                    <input class="w-64 font-normal uppercase" type="text">
                 </span>
                 <span class="font-bold pr-3">FECHA:
                     <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">

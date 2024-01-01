@@ -13,7 +13,7 @@
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
                 <span class="font-bold pr-3">SOLICITADO POR:
-                    <input class="font-normal uppercase" type="text">
+                    <input class="w-64 font-normal uppercase" type="text">
                 </span>
                 <span class="font-bold pr-3">FECHA:
                     <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -43,12 +43,12 @@
             </contract>
         </header>
         <div class="flex flex-col items-center mb-5 leading-relaxed print:mt-2 print:mb-1">
-            <h1 class="text-l font-bold print:text-l">EXAMEN FISICO</h1>
+            <input type="text" class="text-l text-center font-bold print:text-l w-full" value="EXAMEN FISICO">
             <table class="w-2/3 text-center text-sm table-auto print:text-xs" id="table-items">
                 <tbody>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CANTIDAD">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CANTIDAD">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -58,8 +58,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="COLOR">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="COLOR">
                         </td>
                         <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -69,8 +69,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="OLOR">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="OLOR">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -80,8 +80,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="ASPECTO">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="ASPECTO">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -91,8 +91,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="SEDIMIENTO">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="SEDIMIENTO">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -102,8 +102,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="ESPUMA">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="ESPUMA">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -113,8 +113,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="DENSIDAD">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="DENSIDAD">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -124,8 +124,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="REACCION Ph">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="REACCION Ph">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -135,8 +135,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="GLUCOSA">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="GLUCOSA">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -146,8 +146,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CETONAS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CETONAS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -157,8 +157,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="NITRITOS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="NITRITOS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -168,8 +168,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="BILIRRUBINAS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="BILIRRUBINAS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -179,8 +179,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="UROBILINOGENO">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="UROBILINOGENO">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -190,8 +190,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="PROTEINAS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="PROTEINAS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -201,8 +201,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="SANGRE">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="SANGRE">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -216,12 +216,12 @@
         </div>
         <div class="flex flex-col items-center mb-10 leading-relaxed print:mt-1 print:mb-1">
             <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-0 print:hidden" id="agregarFila">Agregar Fila</button>
-            <h1 class="text-l font-bold print:text-l">EXAMEN SEDIMIENTO URINARIO</h1>
-            <table class="w-2/3 text-center text-sm table-auto print:text-xs" id="table-items2">
+            <input type="text" class="w-full text-center text-l font-bold print:text-l" value="EXAMEN SEDIMIENTO URINARIO">
+            <table class="w-2/3 text-start text-sm table-auto print:text-xs" id="table-items2">
                 <tbody>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="LEUCOCITOS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="LEUCOCITOS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -234,8 +234,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CEL EPITELIALES">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CEL EPITELIALES">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -248,8 +248,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CEL RENALES">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CEL RENALES">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -262,8 +262,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="FLORA BACTERIANA">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="FLORA BACTERIANA">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -276,8 +276,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="HEMATIES">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="HEMATIES">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -290,8 +290,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CRISTALES">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CRISTALES">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -304,8 +304,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="FILAMENTOS MUCUOSOS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="FILAMENTOS MUCUOSOS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -318,8 +318,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                            <input type="text" class="w-full text-center" value="CILINDROS">
+                        <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                            <input type="text" class="w-full text-start" value="CILINDROS">
                         </td>
                         <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                             <input type="text" class="text-center w-full">
@@ -385,7 +385,7 @@
         agregarFilaBtn.addEventListener("click", function() {
             const newRow = table.insertRow(-1);
 
-            // Agregar celdas a la nueva fila
+            
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
             const cell3 = newRow.insertCell(2);
@@ -394,7 +394,7 @@
             cell2.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
             cell3.className = "px-2 py-1 text-center border print:hidden";
 
-            cell1.innerHTML = '<input type="text" class="text-center w-full">';
+            cell1.innerHTML = '<input type="text" class="text-start w-full">';
             cell2.innerHTML = '<input type="text" class="text-center w-full">';
             cell3.innerHTML = '<button class="px-2 py-1 bg-red-500 text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
         });
@@ -413,7 +413,7 @@
         agregarFilaBtn.addEventListener("click", function() {
             const newRow = table.insertRow(-1);
 
-            // Agregar celdas a la nueva fila
+            
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
             const cell3 = newRow.insertCell(2);
@@ -424,9 +424,9 @@
             cell3.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
             cell4.className = "px-2 py-1 text-center border print:hidden";
 
-            cell1.innerHTML = '<input type="text" class="text-center w-full">'; // Cambia este contenido según sea necesario
+            cell1.innerHTML = '<input type="text" class="text-start w-full">'; 
             cell2.innerHTML = '<input type="text" class="text-center w-full">';
-            cell3.innerHTML = '<input type="text" class="text-center w-full">'; // Cambia este contenido según sea necesario
+            cell3.innerHTML = '<input type="text" class="text-center w-full">'; 
             cell4.innerHTML = '<button class="px-2 py-1 bg-red-500 text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
         });
     });

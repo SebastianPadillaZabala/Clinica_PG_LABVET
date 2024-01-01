@@ -13,7 +13,7 @@
           <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
         </span>
         <span class="font-bold pr-3">SOLICITADO POR:
-          <input class="font-normal uppercase" type="text">
+          <input class="w-64 font-normal uppercase" type="text">
         </span>
         <span class="font-bold pr-3">FECHA:
           <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -43,23 +43,147 @@
       </contract>
     </header>
     <br>
-    <div class="flex flex-col items-center text-sm mb-10 leading-relaxed print:mt-48 print:mb-2">
-      <h1 class="text-l font-bold">SEROLOGIA</h1>
-      <p class="text-xs print:text-xs">PRUEBA R&Aacute;PIDA CON T&Eacute;CNICA DE INMUNOCROMATOGR&Aacute;FIA DETECCI&Oacute;N DE</p>
-      <p class="text-xs print:text-xs">PAT&Oacute;GENO ANT&Iacute;GENO</p>
+    <div class="flex flex-col items-center text-sm mb-10 leading-relaxed print:mt-32 print:mb-2">
+      <input type="text" class="text-l text-center font-bold" value="SEROLOGIA">
+      <input type="text" class="w-full text-center text-xs print:text-xs" value="PRUEBA R&Aacute;PIDA CON T&Eacute;CNICA DE INMUNOCROMATOGR&Aacute;FIA DETECCI&Oacute;N DE">
+      <input type="text" class="w-full text-center text-xs print:text-xs" value="PAT&Oacute;GENO ANT&Iacute;GENO">
       <table class="w-2/3 text-sm text-center mt-3 border-t border-b border-l border-r table-auto print:text-sm print:mt-3" id="table-items">
         <tbody>
           <tr>
-            <td class="px-2 py-1 border font-bold">CDV Ag (moquillo canino)</td>
+            <td class="px-2 py-1 border font-bold">
+              <input type="text" class="text-center w-full" value="CDV Ag (moquillo canino)">
+            </td>
             <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
               <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
             </td>
           </tr>
         </tbody>
       </table>
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" id="agregarFila">Agregar Fila</button>
+      <table class="w-full text-left text-sm mt-5 table-auto print:text-sm" id="table-items2">
+        <thead>
+          <tr class="text-white bg-gray-700 print:bg-gray-300 print:text-black">
+            <th class="px-2 py-1 text-center">ANALISIS</th>
+            <th class="px-2 py-1 text-center">RESULTADO</th>
+            <th class="px-2 py-1 text-center">RANGO REFERENCIAL.</th>
+            <th class="px-2 py-1 text-center">OBSERVACIONES</th>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+          <tr class="bg-white print:bg-white">
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+              <input type="text" class="text-center w-full">
+            </td>
+            <td class="px-2 py-1 text-center border print:hidden">
+              <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" id="agregarFilaAntibiograma">Agregar Fila</button>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded print:hidden mt-3" onclick="window.print()">Imprimir</button>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded print:hidden mt-3" onclick="mostrarModalImportar()">Guardar</button>
-      <img src="/storage/img/firma3.jpeg" class="w-64 print:mt-72 text-center print:text-lg" />
+      <img src="/storage/img/firma3.jpeg" class="w-64 print:mt-3 text-center print:text-lg" />
     </div>
   </div>
   <img src="/storage/img/fondo.png" class="hidden print:block w-full h-full opacity-20 absolute bottom-24 pr-9" alt="">
@@ -98,6 +222,67 @@
 
   function ocultarModalImportar() {
     modalImportar.classList.add('hidden')
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const agregarFilaBtn = document.getElementById("agregarFila");
+    const table = document.getElementById("table-items").getElementsByTagName("tbody")[0];
+
+    agregarFilaBtn.addEventListener("click", function() {
+      const newRow = table.insertRow(-1);
+
+      const cell1 = newRow.insertCell(0);
+      const cell2 = newRow.insertCell(1);
+      const cell3 = newRow.insertCell(2);
+
+      cell1.className = "px-2 py-1 border font-bold text-center";
+      cell2.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
+      cell3.className = "px-2 py-1 text-center border print:hidden";
+
+      cell1.innerHTML = '<input type="text" class="text-center">';
+      cell2.innerHTML = '<input type="text" class="text-center">';
+      cell3.innerHTML = '<button class="px-2 py-1 bg-red-500 text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
+    });
+  });
+
+  function eliminarFila(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const agregarFilaBtn = document.getElementById("agregarFilaAntibiograma");
+    const table = document.getElementById("table-items2").getElementsByTagName("tbody")[0];
+
+    agregarFilaBtn.addEventListener("click", function() {
+      const newRow = table.insertRow(-1);
+
+      // Agregar celdas a la nueva fila
+      const cell1 = newRow.insertCell(0);
+      const cell2 = newRow.insertCell(1);
+      const cell3 = newRow.insertCell(2);
+      const cell4 = newRow.insertCell(3);
+      const cell5 = newRow.insertCell(4);
+
+      cell1.className = "px-2 py-1 border";
+      cell2.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
+      cell3.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
+      cell4.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
+      cell5.className = "px-2 py-1 text-center border print:hidden";
+
+      cell1.innerHTML = '<input type="text" class="text-center w-full">';
+      cell2.innerHTML = '<input type="text" class="text-center w-full">';
+      cell3.innerHTML = '<input type="text" class="text-center w-full">';
+      cell4.innerHTML = '<input type="text" class="text-center w-full">';
+      cell5.innerHTML = '<button class="px-2 py-1 bg-red-500 text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
+    });
+  });
+
+  function eliminarFila(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
   }
 </script>
 @endsection

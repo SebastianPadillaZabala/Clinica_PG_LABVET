@@ -65,16 +65,6 @@ class MascotasController extends Controller
         return view('analisis.citologia_celular', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
     }
 
-    public function microbiologiaGet($id)
-    {
-        $mascota = Mascota::find($id);
-        $propietario = DB::table('pacientes')
-            ->join('mascotas', 'pacientes.id_pac', '=', 'mascotas.id_paciente')
-            ->select('pacientes.namePac')
-            ->where('mascotas.id_masc', '=', $id)->get();
-        return view('analisis.microbiologia', ['mascota' => $mascota], ['id' => $id, 'propietario' => $propietario]);
-    }
-
     public function inmunologiaGet($id)
     {
         $mascota = Mascota::find($id);

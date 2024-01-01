@@ -13,7 +13,7 @@
           <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
         </span>
         <span class="font-bold pr-3">SOLICITADO POR:
-          <input class="font-normal uppercase" type="text">
+          <input class="w-64 font-normal uppercase" type="text">
         </span>
         <span class="font-bold pr-3">FECHA:
           <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -44,7 +44,7 @@
     </header>
     <content>
       <div id="content" class="flex justify-center md:p-8 lg:p-2 xl:p-2 print:mt-20 print:p-2">
-        <table class="w-full text-left text-sm border-l table-auto print:text-sm" id="table-items">
+        <table class="w-full text-left text-sm table-auto print:text-sm" id="table-items">
           <thead>
             <tr class="text-white bg-gray-700 print:bg-gray-300 print:text-black">
               <th class="px-2 py-1 text-center">ANALISIS</th>
@@ -61,12 +61,12 @@
                 <input type="text" class="text-center w-full" value="TSH">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="Menor a 0.5 ng/ml">
               </td>
-              <td class="px-2 py-1 text-center print:hidden">
+              <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
@@ -75,12 +75,12 @@
                 <input type="text" class="text-center w-full" value="T4">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="1.0 - 4.0 ug/dl">
               </td>
-              <td class="px-2 py-1 text-center print:hidden">
+              <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
@@ -89,18 +89,49 @@
                 <input type="text" class="text-center w-full" value="CORTISOL">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="1.0 - 5.0 ug/dl">
               </td>
-              <td class="px-2 py-1 text-center print:hidden">
+              <td class="px-2 py-1 text-center border print:hidden">
+                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+              </td>
+            </tr>
+            <tr class="bg-white print:bg-white">
+              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
+                <input type="text" class="text-center w-full" value="TESTOSTERONA">
+              </td>
+              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-center">
+              </td>
+              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+                <input type="text" class="text-center w-full" value="1.7 ng/ml">
+              </td>
+              <td class="px-2 py-1 text-center border print:hidden">
+                <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
+              </td>
+            </tr>
+            <tr class="bg-white print:bg-white">
+              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
+                <input type="text" class="text-center w-full" value="PROGESTERONA">
+              </td>
+              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-center">
+              </td>
+              <td class="px-2 py-2 text-left border tabular-nums slashed-zero">
+                <textarea class="w-full text-left" name="" id="" cols="30" rows="5">
+  <= 1 ng/ml periodo de no ovulaci&oacute;n
+  1 - 4  ng/ml periodo pre ovulaci&oacute;n
+  4 - 10 ng/ml ovulaci&oacute;n
+  >= 10 ng/ml periodo f&eacute;rtil</textarea>
+              </td>
+              <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
           </tbody>
         </table>
-
       </div>
     </content>
     <br>
@@ -157,7 +188,6 @@
     agregarFilaBtn.addEventListener("click", function() {
       const newRow = table.insertRow(-1);
 
-      // Agregar celdas a la nueva fila
       const cell1 = newRow.insertCell(0);
       const cell2 = newRow.insertCell(1);
       const cell3 = newRow.insertCell(2);
@@ -168,9 +198,9 @@
       cell3.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
       cell4.className = "px-2 py-1 text-center border print:hidden";
 
-      cell1.innerHTML = '<input type="text" class="text-center">'; // Cambia este contenido según sea necesario
-      cell2.innerHTML = '<input type="text" class="text-center">';
-      cell3.innerHTML = '<input type="text" class="text-center">'; // Cambia este contenido según sea necesario
+      cell1.innerHTML = '<input type="text" class="w-full text-center">'; // Cambia este contenido según sea necesario
+      cell2.innerHTML = '<input type="text" class="w-full text-center">';
+      cell3.innerHTML = '<input type="text" class="w-full text-center">'; // Cambia este contenido según sea necesario
       cell4.innerHTML = '<button class="px-2 py-1 bg-red-500 text-white print:hidden" onclick="eliminarFila(this)">Eliminar</button>';
     });
   });

@@ -13,7 +13,7 @@
           <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
         </span>
         <span class="font-bold pr-3">SOLICITADO POR:
-          <input class="font-normal uppercase" type="text">
+          <input class="w-64 font-normal uppercase" type="text">
         </span>
         <span class="font-bold pr-3">FECHA:
           <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -43,21 +43,21 @@
       </contract>
     </header>
     <content>
-      <div id="content" class="flex flex-col items-center md:p-8 lg:p-2 xl:p-2 print:mt-3 print:p-1 print:gap-2">
+      <div id="content" class="flex flex-col items-center md:p-2 lg:p-1 xl:p-1 print:mt-3 print:p-1 print:gap-2">
         <select id="select-cultivo" class="border-gray-300 text-center text-sm font-bold rounded-md p-2 mt-2 print:text-sm">
           <option>COPROCULTIVO</option>
           <option>UROCULTIVO</option>
           <option>CULTIVO DE HERIDA</option>
-          <option>ISOPADO FARINGEO</option>
+          <option>HISOPADO FARINGEO</option>
         </select>
-        <table class="w-full text-center border-l text-sm table-auto print:text-sm" id="table-items">
+        <table class="w-full text-left text-sm table-auto print:text-sm" id="table-items">
           <tbody>
             <tr>
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="MUESTRA">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="MUESTRA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+                <input type="text" class="text-start w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
@@ -65,65 +65,65 @@
             </tr>
             <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="COLOR">
+                <input type="text" class="w-full" value="COLOR">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+                <input type="text" class="w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
             <tr class="bg-white print:bg-white">
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="CONSISTENCIA">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="CONSISTENCIA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+                <input type="text" class="w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
             <tr class="bg-white print:bg-white">
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="MOCO">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="MOCO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+                <input type="text" class="w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
             <tr>
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="TINCION GRAM">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="TINCION GRAM">
               </td>
-              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+              <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
+                <input type="text" class="text-start w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
             <tr>
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="RECUENTO DE COLONIAS">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="RECUENTO DE COLONIAS">
               </td>
-              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+              <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
+                <input type="text" class="text-start w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
             <tr class="bg-white print:bg-white">
-              <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
-                <input type="text" class="w-full text-center" value="DIAGNOSTICO MICROBIOLOGICO">
+              <td class="px-2 py-1 text-start font-bold border tabular-nums slashed-zero">
+                <input type="text" class="w-full text-start" value="DIAGNOSTICO MICROBIOLOGICO">
               </td>
-              <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center w-full">
+              <td class="px-2 py-1 text-start border tabular-nums slashed-zero">
+                <input type="text" class="text-start w-full">
               </td>
               <td class="px-2 py-1 text-center border print:hidden">
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
@@ -133,7 +133,11 @@
         </table>
       </div>
     </content>
-    <div class="flex flex-col text-sm items-center md:p-8 lg:p-2 xl:p-2 print:mt-0 print:p-2">
+    <div class="flex flex-col text-sm items-start md:p-1 lg:p-1 xl:p-1 print:mt-0 print:p-1">
+      <h1 class="text-sm items-start font-bold">OBSERVACI&Oacute;N</h1>
+      <textarea class="mb-1" rows="2" placeholder="Escriba la observacion...." cols="110"></textarea>
+    </div>
+    <div class="flex flex-col text-sm items-center md:p-2 lg:p-2 xl:p-2 print:mt-0 print:p-2">
       <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-3 print:hidden" id="agregarFila">Agregar Fila</button>
       <input type="text" class="text-center font-bold text-sm mb-2" value="ANTIBIOGRAMA">
       <table class="w-full text-left text-sm table-auto print:text-sm" id="table-items2">
@@ -320,7 +324,7 @@
       const cell3 = newRow.insertCell(2);
       const cell4 = newRow.insertCell(3);
 
-      cell1.className = "px-2 py-1 border font-bold";
+      cell1.className = "px-2 py-1 border";
       cell2.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
       cell3.className = "px-2 py-1 text-center border tabular-nums slashed-zero";
       cell4.className = "px-2 py-1 text-center border print:hidden";

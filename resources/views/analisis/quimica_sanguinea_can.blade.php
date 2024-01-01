@@ -13,7 +13,7 @@
           <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
         </span>
         <span class="font-bold pr-3">SOLICITADO POR:
-          <input class="font-normal uppercase" type="text">
+          <input class="w-64 font-normal uppercase" type="text">
         </span>
         <span class="font-bold pr-3">FECHA:
           <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -61,7 +61,7 @@
                 <input type="text" class="w-full" value="GLICEMIA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="70 - 140 mg/dL">
@@ -70,12 +70,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="CREATININA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="0.5 - 1.6 mg/dL">
@@ -89,7 +89,7 @@
                 <input type="text" class="w-full" value="UREA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="20 - 50 mg/dL">
@@ -98,12 +98,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="NITROGENO UREICO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="7 - 27 mg/dL">
@@ -112,12 +112,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="TRANSAMINASA G.O.T.(AST)">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center print:bg-white">
+                <input type="text" class="w-full text-center print:bg-white">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="10 - 110 U/L">
@@ -126,12 +126,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="TRANSAMINASA G.P.T.(ALT)">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="10 - 100 U/L">
@@ -140,12 +140,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="FOSFATASA ALCALINA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="68 - 240 U/L">
@@ -154,12 +154,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="ALBUMINA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="2.3 - 3.8 g/dL">
@@ -168,12 +168,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="PROTEINAS TOTALES">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="5.7 - 8.0 g/dL">
@@ -182,12 +182,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="AMILASA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="269 - 1462 U/L">
@@ -196,12 +196,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-gray-100 print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="LIPASA">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="50.0 - 470 U/L">
@@ -210,12 +210,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="TRIGLICERIDOS">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="25 - 120 mg/dL">
@@ -224,12 +224,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="COLESTEROL">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="80 - 180 mg/dL">
@@ -238,12 +238,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="FOSFORO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="2.0 - 6.2 mg/dL">
@@ -252,12 +252,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="SODIO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="135 - 150 meq/L">
@@ -266,12 +266,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="POTASIO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="3,6 - 5,8 meq/L">
@@ -280,12 +280,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="CLORO">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="105 - 120 meq/L">
@@ -294,12 +294,12 @@
                 <button class="px-2 py-1 bg-red-500 text-white" onclick="eliminarFila(this)">Eliminar</button>
               </td>
             </tr>
-            <tr class="bg-white print:bg-white">
+            <tr>
               <td class="px-2 py-1 text-center font-bold border tabular-nums slashed-zero">
                 <input type="text" class="w-full" value="CALCIO TOTAL">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
-                <input type="text" class="text-center">
+                <input type="text" class="w-full text-center">
               </td>
               <td class="px-2 py-1 text-center border tabular-nums slashed-zero">
                 <input type="text" class="text-center w-full" value="7 - 11,5 mg/dL">

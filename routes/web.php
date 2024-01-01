@@ -71,9 +71,6 @@ Route::get('/hormonas/{id}',[MascotasController::class, 'hormonasGet'])
 Route::get('/citologia_celular/{id}',[MascotasController::class, 'citologia_celularGet'])
 ->name('citologia_celular');
 
-Route::get('/microbiologia/{id}',[MascotasController::class, 'microbiologiaGet'])
-->name('microbiologia');
-
 Route::get('/inmunologia/{id}',[MascotasController::class, 'inmunologiaGet'])
 ->name('inmunologia');
 

@@ -13,7 +13,7 @@
                     <span class="font-normal uppercase">{{$propietario[0]->namePac}}</span>
                 </span>
                 <span class="font-bold pr-3">SOLICITADO POR:
-                    <input class="font-normal uppercase" type="text">
+                    <input class="w-64 font-normal uppercase" type="text">
                 </span>
                 <span class="font-bold pr-3">FECHA:
                     <input class="font-normal" type="date" value="{{ now()->format('Y-m-d') }}">
@@ -45,14 +45,34 @@
         <content>
             <div id="content" class="flex flex-col justify-center md:p-8 lg:p-2 xl:p-2 print:mt-5 print:justify-center print:p-1">
                 <div class="flex flex-col items-start gap-1 mb-5 m-8 leading-relaxed print:mt-1 print:mb-20 print:text-sm print:m-0">
-                    <h1 class="text-sm font-bold">Serie blanca</h1>
-                    <textarea rows="1" cols="110"></textarea>
-                    <h1 class="text-sm font-bold">Serie roja</h1>
-                    <textarea rows="1" cols="110"></textarea>
-                    <h1 class="text-sm font-bold">Plaquetas</h1>
-                    <textarea rows="1" cols="110"></textarea>
-                    <h1 class="text-sm font-bold">Evaluaci&oacute;n citol&oacute;gica</h1>
-                    <textarea rows="2" cols="110"></textarea>
+                    <div class="section-container">
+                        <div class="flex items-center justify-between">
+                            <input type="text" class="w-full text-sm font-bold" value="Serie blanca">
+                            <button class="text-red-500 hover:text-red-700 delete-button print:hidden">Eliminar</button>
+                        </div>
+                        <textarea rows="1" cols="110"></textarea>
+                    </div>
+                    <div class="section-container">
+                        <div class="flex items-center justify-between">
+                            <input type="text" class="w-full text-sm font-bold" value="Serie roja">
+                            <button class="text-red-500 hover:text-red-700  delete-button print:hidden">Eliminar</button>
+                        </div>
+                        <textarea rows="1" cols="110"></textarea>
+                    </div>
+                    <div class="section-container">
+                        <div class="flex items-center justify-between">
+                            <input type="text" class="w-full text-sm font-bold" value="Plaquetas">
+                            <button class="text-red-500 hover:text-red-700 delete-button print:hidden">Eliminar</button>
+                        </div>
+                        <textarea rows="1" cols="110"></textarea>
+                    </div>
+                    <div class="section-container">
+                        <div class="flex items-center justify-between">
+                            <input type="text" class="w-full text-sm font-bold" value="Evaluaci&oacute;n citol&oacute;gica">
+                            <button class="text-red-500 hover:text-red-700 delete-button print:hidden">Eliminar</button>
+                        </div>
+                        <textarea rows="2" cols="110"></textarea>
+                    </div>
                 </div>
                 <div class="flex flex-row justify-center items-center m-5 mb-10 leading-relaxed print:mt-1 print:mb-2">
                     <form method="POST" action="/upload" enctype="multipart/form-data">
@@ -134,5 +154,15 @@
         }
         reader.readAsDataURL(event.target.files[0]);
     }
+</script>
+<script>
+    const deleteButtons = document.querySelectorAll(".delete-button");
+
+    deleteButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const sectionContainer = button.closest(".section-container");
+            sectionContainer.remove();
+        });
+    });
 </script>
 @endsection
